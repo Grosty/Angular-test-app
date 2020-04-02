@@ -1,0 +1,147 @@
+.banner {
+
+  //background-image: url("../../assets/img/bg_1.png");
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-position-x: center;
+  position: relative;
+
+  .banner-bg {
+    position: absolute;
+    width: 100%;
+    background-image: url("../../assets/img/bg_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    padding: 500px 0;
+  }
+
+
+  .container {
+    //max-width: 1500px;
+    //
+    padding-top: 250px;
+    padding-bottom: 290px;
+  }
+
+  .title-wrap {
+    h1 {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 3.125rem;
+      line-height: 4.4375rem;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    img {
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: #f5f1f0;
+      margin-bottom: 90px;
+    }
+
+    .markets-wrap {
+      &-title {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+
+      }
+      &-icons {
+        a {
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .banner {
+    .banner-bg {
+      padding: 430px 0;
+    }
+    .container {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+    .title-wrap {
+      h1 {
+        font-size: 3rem;
+        line-height: 4.3rem;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .banner {
+    .container {
+      padding-top: 90px;
+      padding-bottom: 150px;
+    }
+    .title-wrap {
+      h1 {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2.0625rem;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    .title-wrap {
+      h1 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+      .markets-wrap {
+        &-title {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner {
+    .container {
+      padding-top: 90px;
+      padding-bottom: 80px;
+    }
+    .title-wrap {
+      h1 {
+        font-size: 1.5rem;
+        line-height: 2.0625rem;
+      }
+    }
+  }
+}
+
+

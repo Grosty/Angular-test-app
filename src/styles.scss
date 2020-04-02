@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background: #141414;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button.action {
+  width: 245px;
+  height: 50px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #0DC78F;
+  border-radius: 5px;
+  border: 1px solid #0DC78F;
+  margin: 20px 0;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: #0DC78F;
+    outline: none;
+  }
+}
+
+.user-cart-wrap {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+    margin-bottom: 50px;
+  }
+
+  .img-on-mini {
+    margin-bottom: 60px;
+    max-height: 60vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  ul {
+    li {
+      display: flex;
+      margin-bottom: 40px;
+
+      .user-cart-item-icon {
+        span {
+          display: block;
+          background-color: #c4c4c4;
+          width: 47px;
+          height: 47px;
+          border-radius: 50%;
+          margin-right: 21px;
+        }
+      }
+      .user-cart-item-content {
+        h5 {
+          font-family: Roboto, sans-serif;
+          font-weight: 500;
+          font-size: 1.375rem;
+          line-height: 1.625rem;
+          letter-spacing: 0.63px;
+          margin-bottom: 20px;
+          color: #fbfbfb;
+        }
+        p {
+          font-family: "Open Sans", sans-serif;
+          font-size: 1.0625rem;
+          line-height: 1.4375rem;
+          letter-spacing: 0.48px;
+          font-weight: 300;
+          color: #adadad;
+        }
+      }
+    }
+  }
+}
+//.navbar-dark .navbar-nav .active>.nav-link {
+//  color: #0DC78F;
+//}
+
+//--------header------
+
+//--------navBar------
+
+
+@media (min-width: 1500px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1460px;
+  }
+}

@@ -1,0 +1,64 @@
+section {
+  padding-top: 100px;
+  padding-bottom: 80px; }
+  section h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 2.1875rem;
+    line-height: 3rem;
+    color: #FBFBFB; }
+  section .slider-wrap {
+    padding: 10px 70px; }
+    section .slider-wrap .slider-tabs {
+      position: relative; }
+      section .slider-wrap .slider-tabs span {
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 2rem;
+        border: 2px solid #fff;
+        background-color: #fff;
+        border-radius: 50%;
+        color: #141414;
+        position: absolute;
+        top: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out; }
+        section .slider-wrap .slider-tabs span:hover {
+          background-color: transparent;
+          color: #fff;
+          opacity: 0.7; }
+        section .slider-wrap .slider-tabs span:first-child {
+          left: -70px; }
+        section .slider-wrap .slider-tabs span:last-child {
+          right: -70px; }
+    section .slider-wrap .slider-items .slider-item h6 {
+      font-family: "Open Sans", sans-serif;
+      font-style: italic;
+      font-size: 1.125rem;
+      line-height: 2.125rem;
+      color: #FBFBFB; }
+    section .slider-wrap .slider-items .slider-item p {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-size: 0.875rem;
+      line-height: 1.1875rem;
+      letter-spacing: 0.5px;
+      color: #FBFBFB; }
+
+@media screen and (max-width: 991px) {
+  section h2 {
+    margin-bottom: 50px;
+    font-size: 1.5rem; }
+  section .slider-wrap .slider-tabs span {
+    background-color: transparent;
+    border: 2px solid transparent;
+    font-size: 3rem;
+    color: #fff;
+    top: 0; }
+    section .slider-wrap .slider-tabs span:hover, section .slider-wrap .slider-tabs span:focus {
+      opacity: 0.5; } }
+
+/*# sourceMappingURL=slider-section.component.css.map */
