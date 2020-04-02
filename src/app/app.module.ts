@@ -8,6 +8,9 @@ import { BgWrapComponent } from './bg-wrap/bg-wrap.component';
 import { MediaFirstComponent } from './media-first/media-first.component';
 import { SliderSectionComponent } from './slider-section/slider-section.component';
 import { MediaSecondComponent } from './media-second/media-second.component';
+import { FuturesCompComponent } from './futures-comp/futures-comp.component';
+import { MarketsCompComponent } from './markets-comp/markets-comp.component';
+import { FooterCompComponent } from './footer-comp/footer-comp.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { MediaSecondComponent } from './media-second/media-second.component';
     MediaFirstComponent,
     SliderSectionComponent,
     MediaSecondComponent,
+    FuturesCompComponent,
+    MarketsCompComponent,
+    FooterCompComponent,
 
   ],
   imports: [

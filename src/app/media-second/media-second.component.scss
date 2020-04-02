@@ -15,3 +15,13 @@ section {
     padding-top: 20px;
   }
 }
+
+@media screen and (max-width: 991px){
+  section {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    .right-block {
+      padding-left: 15px;
+    }
+  }
+}
