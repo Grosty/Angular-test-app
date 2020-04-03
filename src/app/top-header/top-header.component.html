@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark  fixed-top py-0">
+<nav  [className]="(!scrolling) ? currentClass : currentClass + ' addBgColor' " >
   <div class="bg-darkness d-md-none"></div>
   <div class="container py-2">
     <a class="navbar-brand logo-wrap" href="#">

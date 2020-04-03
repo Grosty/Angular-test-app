@@ -13,9 +13,15 @@ export class TopHeaderComponent implements OnInit {
 
   title = 'Logo';
   // links = ['Home', 'Link 1', 'Link 2'];
+  scrolling = false;
+  currentClass = "navbar navbar-expand-sm navbar-dark  fixed-top py-0";
 
 
-  constructor() { }
+  @HostListener('window:scroll', ['$event'])
+  onScroll(){
+    this.scrolling = (pageYOffset > 100);
+    console.log(this.scrolling);
+  }
 
   ngOnInit(): void {
   }
