@@ -1,0 +1,38 @@
+@mixin ulList () {
+  ul {
+    li {
+      display: flex;
+      margin-bottom: 40px;
+
+      .user-cart-item-icon {
+        span {
+          display: block;
+          background-color: #c4c4c4;
+          width: 47px;
+          height: 47px;
+          border-radius: 50%;
+          margin-right: 21px;
+        }
+      }
+      .user-cart-item-content {
+        h5 {
+          font-family: Roboto, sans-serif;
+          font-weight: 500;
+          font-size: 1.375rem;
+          line-height: 1.625rem;
+          letter-spacing: 0.63px;
+          margin-bottom: 20px;
+          color: #fbfbfb;
+        }
+        p {
+          font-family: "Open Sans", sans-serif;
+          font-size: 1.0625rem;
+          line-height: 1.4375rem;
+          letter-spacing: 0.48px;
+          font-weight: 300;
+          color: #adadad;
+        }
+      }
+    }
+  }
+}
