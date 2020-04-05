@@ -20,7 +20,7 @@ export class TopHeaderComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onScroll(){
     this.scrolling = (pageYOffset > 100);
-    console.log(this.scrolling);
+    // console.log(this.scrolling);
   }
 
   ngOnInit(): void {

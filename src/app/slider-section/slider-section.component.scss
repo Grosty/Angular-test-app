@@ -8,10 +8,11 @@ section {
     font-size: 2.1875rem;
     line-height: 3rem;
     color: #FBFBFB;
+    padding-top: 20px;
   }
 
   .slider-wrap {
-    padding: 10px 70px;
+    padding: 10px 150px;
 
     .slider-tabs {
       position: relative;
@@ -38,10 +39,10 @@ section {
         }
 
         &:first-child {
-          left: -70px;
+          left: -150px;
         }
         &:last-child {
-          right: -70px;
+          right: -150px;
         }
       }
     }
@@ -68,6 +69,24 @@ section {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  section {
+    .slider-wrap {
+      padding: 10px 100px;
+      .slider-tabs {
+        span {
+          &:first-child {
+            left: -100px;
+          }
+          &:last-child {
+            right: -100px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 991px){
   section {
     padding-top: 50px;
@@ -78,6 +97,7 @@ section {
       font-size: 1.5rem;
     }
     .slider-wrap {
+      padding: 10px 50px;
       .slider-tabs {
         span {
           background-color: transparent;
@@ -89,7 +109,14 @@ section {
           &:focus {
             opacity: 0.5;
           }
+          &:first-child {
+            left: -65px;
+          }
+          &:last-child {
+            right: -65px;
+          }
         }
+
       }
     }
   }

@@ -16,12 +16,20 @@ section {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    .right-block {
+      padding-left: 15px;
+    }
+  }
+}
+
 @media screen and (max-width: 991px){
   section {
     padding-top: 30px;
     padding-bottom: 10px;
-    .right-block {
-      padding-left: 15px;
-    }
   }
 }
