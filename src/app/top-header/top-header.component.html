@@ -1,39 +1,47 @@
-<header>
-  <nav  [className]="(!scrolling) ? currentClass : currentClass + ' addBgColor' " >
-    <div class="bg-darkness d-md-none"></div>
-    <div class="container py-2">
-      <a class="navbar-brand logo-wrap" href="#">
-        <div class="logoImg-wrap"></div>
-        <span>{{title.toUpperCase()}}</span>
-      </a>
-      <button class="navbar-toggler" type="button"
-              data-toggle="collapse"
-              data-target="#navbarToggler"
-              aria-controls="navbarToggler"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse"
-           id="navbarToggler">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          <!--      <li *ngFor="let link of links">-->
-          <!--        <a href="#">{{link}}</a>-->
-          <!--      </li>-->
-          <li class="nav-item active">
-            <a class="nav-link " href="#">Home <span
-              class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Link 2</a>
-          </li>
-        </ul>
-      </div>
+<header class="fixed-top"
+        [class.addBgColor]="scrolling || !maxBgInnerWidth"
+        (window:resize)="onResize($event)"
+>
+  <div class="container top-header">
+    <a href="#" [ngClass]="{ 'logo-wrap': true, 'logo-wrap-center': navMenuOpen}">
+      <div class="logo-wrap-img"></div>
+      <span>{{title | uppercase}}</span>
+    </a>
+    <nav class="d-none d-lg-flex">
+      <ul class="navLinksMax d-flex">
+        <li *ngFor="let link of links; let idx = index">
+          <a href="#"
+             [style.color]="idx === activeLink ? '#0DC78F' : null "
+          (click)="toggleLink(idx)"
+          >{{link}}</a>
+        </li>
+      </ul>
+    </nav>
+    <div [ngClass]="{ 'navBtn': true,
+                      'd-flex': true,
+                      'd-lg-none': true,
+                      'navBtnOpen': navMenuOpen }"
+      (click)="toggleNavBtn()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </nav>
+  </div>
+  <div [ngClass]="{ 'container bottom-header': true,
+                    'hide-bottom-header': navMenuOpen,
+                    'bottom-header-transition': isLoaded
+                    } ">
+    <ul class="mobileMenu" >
+      <li *ngFor="let link of links; let idx = index">
+        <a href="#"
+           [style.color]="idx === activeLink ? '#0DC78F' : null "
+           (click)="toggleLink(idx)"
+        >{{link}}</a>
+      </li>
+    </ul>
+  </div>
 </header>
+
 

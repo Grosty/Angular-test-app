@@ -4,18 +4,34 @@
       Lorem ipsum dolor sit amet
     </h2>
     <div class="col-12 col-lg-6 col-xl-7">
-      <div class="slider-wrap">
+      <div class="slider-wrap" [ngStyle]="{height: maxItemHeight + 'px'}">
         <div class="slider-tabs">
-          <span>&#8249;</span>
-          <span>&#8250;</span>
+          <span (click)="stepDown()">&#8249;</span>
+          <span (click)="stepUp()">&#8250;</span>
         </div>
-        <div class="slider-items">
+        <div class="slider-items" [ngStyle]="{left: activeSlider * 100 + '%'}">
           <div class="slider-item">
             <h6>
               Nibh nisl
             </h6>
             <p>
               Condimentum id venenatis a condimentum vitae sapien pellentesque. At tellus at urna condimentum mattis pellentesque id nibh tortor.
+            </p>
+          </div>
+          <div class="slider-item">
+            <h6>
+              Nam aliquam
+            </h6>
+            <p>
+              Sem et tortor consequat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Elementum eu facilisis sed odio morbi.
+            </p>
+          </div>
+          <div class="slider-item">
+            <h6>
+              Nullam
+            </h6>
+            <p>
+              Non nisi est sit amet facilisis magna. Donec ac odio tempor orci dapibus ultrices.
             </p>
           </div>
         </div>

@@ -12,18 +12,35 @@ import {
 export class TopHeaderComponent implements OnInit {
 
   title = 'Logo';
-  // links = ['Home', 'Link 1', 'Link 2'];
+  links = ['Lorem ipsum 1', 'Lorem ipsum 2', 'Lorem ipsum 3'];
+  activeLink = 0;
   scrolling = false;
-  currentClass = "navbar navbar-expand-sm navbar-dark  fixed-top py-0";
-
+  maxBgInnerWidth = false;
+  navMenuOpen = false;
+  isLoaded = false;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(){
-    this.scrolling = (pageYOffset > 100);
-    // console.log(this.scrolling);
+    this.scrolling = (pageYOffset > 50);
+    this.navMenuOpen = false;
   }
 
   ngOnInit(): void {
+    this.maxBgInnerWidth = (window.innerWidth > 991);
   }
 
+  onResize(event) {
+    this.maxBgInnerWidth  = event.target.innerWidth > 991;
+    if (event.target.innerWidth > 991) {
+      this.navMenuOpen = false;
+    }
+  }
+
+  toggleLink(idx) {
+    this.activeLink = idx;
+  }
+  toggleNavBtn() {
+    this.navMenuOpen = !this.navMenuOpen;
+    this.isLoaded = true;
+  }
 }

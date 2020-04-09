@@ -10,10 +10,14 @@ export class BgWrapComponent implements OnInit {
   // bgImgUri = '../../assets/img/bg_1.png';
   appleBadgeUri = '../../assets/img/apple-max.png';
   googleBadgeUri = '../../assets/img/google-max.png';
+  maxBgInnerWidth = false;
 
-  constructor() { }
+  onResize(event) {
+    this.maxBgInnerWidth = event.target.innerWidth > 991;
+  }
 
   ngOnInit(): void {
+    this.maxBgInnerWidth = (window.innerWidth > 991);
   }
 
 }

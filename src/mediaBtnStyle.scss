@@ -1,0 +1,22 @@
+@import "variables";
+@import "font";
+
+button.action {
+  width: 245px;
+  height: 50px;
+  color: $btcColor;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 600;
+  background-color: $btnBgColor;
+  border-radius: 5px;
+  border: 1px solid $btnBgColor;
+  margin: 20px 0;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $btnBgColor;
+    outline: none;
+  }
+}

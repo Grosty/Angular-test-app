@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin ulList () {
   ul {
     li {
@@ -22,7 +24,7 @@
           line-height: 1.625rem;
           letter-spacing: 0.63px;
           margin-bottom: 20px;
-          color: #fbfbfb;
+          color: $mediaTitleColor
         }
         p {
           font-family: "Open Sans", sans-serif;
@@ -30,9 +32,48 @@
           line-height: 1.4375rem;
           letter-spacing: 0.48px;
           font-weight: 300;
-          color: #adadad;
+          color: $mediaContentColor;
         }
       }
     }
   }
+}
+
+
+body {
+  background: $mainBgColor;
+
+  //font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: $mainFontColor;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+
+
+.user-cart-wrap {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+    margin-bottom: 50px;
+  }
+
+  .img-on-mini {
+    margin-bottom: 60px;
+    max-height: 60vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include ulList();
 }
