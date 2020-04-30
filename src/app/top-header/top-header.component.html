@@ -29,14 +29,14 @@
       <span></span>
     </div>
   </div>
-  <div [ngClass]="{ 'container bottom-header': true,
+  <div [ngClass]="{ 'bottom-header': true,
                     'hide-bottom-header': navMenuOpen,
                     'bottom-header-transition': isLoaded
                     } ">
     <ul class="mobileMenu" >
       <li *ngFor="let link of links; let idx = index">
         <a href="#"
-           [style.color]="idx === activeLink ? '#0DC78F' : null "
+           [class.headerActiveNavColor]="idx === activeLink "
            (click)="toggleLink(idx)"
         >{{link}}</a>
       </li>
@@ -45,3 +45,4 @@
 </header>
 
 
+<!-- add active link class -->

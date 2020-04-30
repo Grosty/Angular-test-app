@@ -5,5 +5,468 @@
 @import "media_styles";
 
 
+body {
+  background: $mainBgColor;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: $mainFontColor;
+}
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+//---------top-header--------
+
+header {
+  transition: all 0.2s ease-in-out;
+  min-height: 80px;
+
+  ul {
+    li {
+      a {
+        color: $headerNavsColor;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        transition: all 0.2s ease-out;
+
+        &:hover,
+        &:focus {
+          opacity: 0.7;
+          color: inherit;
+          text-decoration: inherit;
+        }
+      }
+    }
+  }
+
+  .top-header {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Open Sans", sans-serif;
+    z-index: 1;
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      margin-left: 0;
+
+      &-img {
+        width: 43px;
+        height: 43px;
+        background-color: #C4C4C4;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+      span {
+        color: $headerLogoColor;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+    .logo-wrap-center {
+      margin-left: calc(50% - 50px);
+    }
+
+    .navBtn {
+      width: 20px;
+      height: 14px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+      z-index: 5;
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+      span {
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease-out;
+        &:first-child {
+          top: 0;
+        }
+        &:nth-child(2) {
+          top: 50%;
+          margin-top: -1px;
+        }
+        &:nth-child(3) {
+          bottom: 50%;
+          margin-bottom: -1px;
+        }
+        &:last-child {
+          bottom: 0;
+        }
+      }
+    }
+
+    .navBtnOpen {
+      span {
+        &:first-child {
+          transform: translateY(-50px) scaleX(0);
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+        &:last-child {
+          transform: translateY(50px) scaleX(0);
+          opacity: 0;
+        }
+      }
+    }
+
+
+
+    nav {
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-header {
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+
+    .mobileMenu {
+      padding-top: 45px;
+      padding-bottom: 10px;
+      li {
+        a {
+          text-align: center;
+          margin-bottom: 50px;
+        }
+      }
+    }
+    &.hide-bottom-header {
+      height: 100vh;
+      opacity: 1;
+    }
+    &.bottom-header-transition {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &.addBgColor {
+    background-color:  $mainBgColor;
+  }
+
+  ul>li>a.headerActiveNavColor {
+    color: $headerActiveNavColor;
+  }
+}
+
+//------end-top-header--------
+
+//-------bg-wrap--------------
+
+section.banner {
+  &.banner-bg {
+    background-image: url("src/assets/img/bg_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .container {
+    padding-top: 250px;
+    padding-bottom: 290px;
+  }
+
+  .title-wrap {
+    h1, h2 {
+      font-family: "Open Sans", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      color: $bannerHeaderColor;
+    }
+    h1 {
+      font-size: 3.125rem;
+      line-height: 4.4375rem;
+      margin-bottom: 30px;
+    }
+    img {
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      color: $bannerContentColor;
+      margin-bottom: 90px;
+    }
+    h2 {
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+    }
+    .markets-wrap {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.banner {
+    .container {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+    .title-wrap {
+      h1 {
+        font-size: 3rem;
+        line-height: 4.3rem;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  section.banner {
+    .container {
+      padding-top: 90px;
+      padding-bottom: 150px;
+    }
+    .title-wrap {
+      h1 {
+        font-size: 1.5rem;
+        line-height: 2.0625rem;
+      }
+      h2 {
+        text-align: left;
+      }
+      .markets-wrap {
+        text-align: end;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  section.banner {
+    .title-wrap {
+      h1 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner {
+    .container {
+      padding-top: 90px;
+      padding-bottom: 30px;
+    }
+    .title-wrap {
+      h1 {
+        font-size: 1.5rem;
+        line-height: 2.0625rem;
+      }
+    }
+  }
+}
+
+//--------end-bg-comp-------
+
+//--------slider-section------
+
+.slider-section {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  color: $sliderContentColor;
+  font-family: "Open Sans", sans-serif;
+
+  h2 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.1875rem;
+    line-height: 3rem;
+    letter-spacing: -0.0954546px;
+    margin-bottom: 50px;
+  }
+
+  .slider-col {
+    padding: 0 150px;
+
+    span {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: #fff;
+      }
+
+      &.left-arrow {
+        left: 0;
+        top: 5px;
+      }
+      &.right-arrow {
+        right: 0;
+        top: 5px;
+      }
+
+    }
+  }
+
+  .slider-item-title {
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    margin-bottom: 20px;
+  }
+  .slider-item-content {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    letter-spacing: 0.401333px;
+  }
+
+  .carousel {
+    outline: none;
+    min-height: 150px;
+  }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .slider-section {
+    .slider-col {
+      padding: 0 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px){
+  .slider-section {
+    padding-top: 80px;
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 2.0625rem;
+    }
+    .slider-col {
+      padding: 0 70px;
+      span {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid transparent;
+        &:hover,
+        &:focus {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+//---------end-slider-section--------
+
+//---------media-first--------------
+
+
+.user-cart-wrap {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+    margin-bottom: 50px;
+    color: $mediaHeaderColor;
+  }
+
+  .img-on-mini {
+    margin-bottom: 60px;
+    max-height: 60vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include ulList();
+}
+
+section.media-first-section {
+  overflow: hidden;
+
+  .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bg-image {
+    position: relative;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50vw;
+    }
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  section.media-first-section {
+    h2 {
+      font-size: 1.5rem;
+      line-height: 2.0625rem;
+    }
+    ul {
+      li {
+        h5 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
 

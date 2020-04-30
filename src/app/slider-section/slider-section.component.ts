@@ -1,8 +1,9 @@
 import {
   Component,
-  HostListener,
-  OnInit
+  OnInit,
+  ViewChild
 } from '@angular/core';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-slider-section',
@@ -11,31 +12,31 @@ import {
 })
 export class SliderSectionComponent implements OnInit {
 
+  @ViewChild('ngcarousel', { static: true }) ngCarousel: NgbCarousel;
 
-  maxItemHeight = 0;
-  activeSlider = 0;
+  public sliderItems = [
+    {
+      title: 'Nullam',
+      content: 'Non nisi est sit amet facilisis magna. Donec ac odio tempor orci dapibus ultrices.'
+    },
+    {
+      title: 'Nibh nisl',
+      content: 'Condimentum id venenatis a condimentum vitae sapien pellentesque. At tellus at urna condimentum mattis pellentesque id nibh tortor.'
+    },
+    {
+      title: 'Nam aliquam',
+      content: 'Sem et tortor consequat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Elementum eu facilisis sed odio morbi.'
+    }
+  ];
 
   ngOnInit(): void {
-    const items = Array.from(document.getElementsByClassName('slider-item'));
-    if (items.length > 0) {
-      const maxH =  Math.max(...items.map(it => it.getBoundingClientRect().height) );
-      this.maxItemHeight = maxH;
-    }
   }
 
-  stepUp() {
-    if (this.activeSlider === -2) {
-      return null;
-    } else {
-      this.activeSlider--;
-    }
+  getToPrev() {
+    this.ngCarousel.prev();
   }
 
-  stepDown() {
-    if (this.activeSlider === 0) {
-      return null;
-    } else {
-      this.activeSlider++;
-    }
+  goToNext() {
+    this.ngCarousel.next();
   }
 }
