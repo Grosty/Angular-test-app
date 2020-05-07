@@ -1,8 +1,8 @@
-@import "stylelist";
-@import "font";
-@import "variables";
-@import "mediaBtnStyle";
-@import "media_styles";
+@import "assets/styles/stylelist";
+@import "assets/styles/font";
+@import "assets/styles/variables";
+@import "assets/styles/mediaBtnStyle";
+@import "assets/styles/media_styles";
 
 
 body {
@@ -282,7 +282,7 @@ section.banner {
 }
 
 @media screen and (max-width: 575px) {
-  .banner {
+  section.banner {
     .container {
       padding-top: 90px;
       padding-bottom: 30px;
@@ -365,7 +365,7 @@ section.banner {
 
   .carousel {
     outline: none;
-    min-height: 150px;
+    min-height: 165px;
   }
 }
 
@@ -470,3 +470,143 @@ section.media-first-section {
   }
 }
 
+//---------end-media-first--------
+
+//---------media-second--------------
+
+section.media-second {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .fit-img {
+    padding-right: 40px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .right-block {
+    padding-left: 50px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.media-second {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    .right-block {
+      padding-left: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px){
+  section.media-second {
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 2.0625rem;
+    }
+  }
+}
+
+//---------end-media-second--------
+
+//---------futures-comp--------------
+
+section.futures-comp {
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+  h2, h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    font-style: normal;
+    font-size: 2.1875rem;
+    line-height: 3rem;
+    letter-spacing: -0.0954546px;
+    color: $featuresHeaderColor;
+  }
+
+  @include ulList();
+
+  .markets-wrap {
+    margin-top: 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      margin-bottom: 60px;
+      font-size: 2.1875rem;
+      letter-spacing: -0.0954546px;
+      color: $marketsTitleColor;
+    }
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+  section.futures-comp {
+    padding-top: 30px;
+    padding-bottom: 100px;
+
+    h2 {
+      font-size: 1.5rem;
+      justify-content: flex-start;
+    }
+
+    .markets-wrap {
+      margin-top: 100px;
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+//------footer----------
+
+footer {
+  background-color: #000;
+
+  .container {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: $footerContentColor;
+    text-align: center;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  footer {
+    .container {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  footer {
+    .container {
+      text-align: left;
+    }
+  }
+}
